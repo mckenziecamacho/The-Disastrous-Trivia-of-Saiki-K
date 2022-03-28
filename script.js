@@ -39,3 +39,5 @@ let seventhQuestion = {
     answers: ['The Twelve Demon Moons', 'Dark Reunion', 'Akatsuki', 'The League of Villans'],
     correctAnswer: 1
 }
+
+let divOne = document.getElementById('questionOne');
