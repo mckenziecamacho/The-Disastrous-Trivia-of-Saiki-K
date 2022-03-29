@@ -2,7 +2,7 @@ let firstQuestion = {
     question: 'What is Saiki\'s favorite food?',
     answers: ['Ramen', 'Miso Soup', 'Coffee Jelly', 'Tonkatsu'],
     correctAnswer: 2
-}
+} 
 
 let secondQuestion = {
     question: 'Who is Saiki\'s best friend?',
@@ -39,5 +39,3 @@ let seventhQuestion = {
     answers: ['The Twelve Demon Moons', 'Dark Reunion', 'Akatsuki', 'The League of Villans'],
     correctAnswer: 1
 }
-
-let divOne = document.getElementById('questionOne');
