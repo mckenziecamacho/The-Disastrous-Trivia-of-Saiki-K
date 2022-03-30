@@ -1,4 +1,4 @@
-let myQuestions = [
+let questions = [
 {
     question: 'What is Saiki\'s favorite food?',
     answers: {
@@ -73,24 +73,31 @@ let myQuestions = [
 
 const startButton = document.getElementById('start-btn')
 const questionContainer = document.getElementById('question-container')
-const question = document.getElementById('question')
-const answers = document.getElementById('answer-buttons')
+const questionElement = document.getElementById('question')
+const answerButtons = document.getElementById('answer-buttons')
+
+
 startButton.addEventListener('click', startGame);
+let currentQuestionIndex = 0; 
+
 
 function startGame() {
 console.log('start')
+currentQuestionIndex = questions
 selectNextQuestion()
 }
 
 function selectNextQuestion (){
-displayQuestion
+displayQuestion([currentQuestionIndex])
+
 }
 
 function displayQuestion(question){
-    questions.innerText = question.question  
+    questionElement.innerText = question.question 
 
 }
 
 function selectAnswer (){
+
 
 }
