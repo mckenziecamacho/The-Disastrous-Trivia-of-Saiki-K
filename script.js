@@ -39,3 +39,14 @@ let seventhQuestion = {
     answers: ['The Twelve Demon Moons', 'Dark Reunion', 'Akatsuki', 'The League of Villans'],
     correctAnswer: 1
 }
+
+let questions = document.querySelector('#question');
+let answers = document.getElementById('answer-buttons');
+
+
+const startButton = document.querySelector(".next-btn btn");
+startButton.addEventListener("click", function() {
+    alert("you clicked a button!");
+});
+
+const questionContainerElement = document.querySelector('question-container');
