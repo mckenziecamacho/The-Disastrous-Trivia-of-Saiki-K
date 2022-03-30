@@ -72,15 +72,18 @@ let myQuestions = [
 ];
 
 const startButton = document.getElementById('start-btn')
-
+const questionContainer = document.getElementById('question-container')
+const question = document.getElementById('question')
+const answers = document.getElementById('answer-buttons')
 startButton.addEventListener('click', startGame);
+
 function startGame() {
 console.log('start')
-
+selectNextQuestion()
 }
 
 function selectNextQuestion (){
-
+displayQuestion
 }
 
 function displayQuestion(question){
