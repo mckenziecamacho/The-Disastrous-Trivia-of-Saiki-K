@@ -71,28 +71,23 @@ let myQuestions = [
 }
 ];
 
+const startButton = document.getElementById('start-btn')
 
+startButton.addEventListener('click', startGame);
+function startGame() {
+console.log('start')
 
+}
 
+function selectNextQuestion (){
 
+}
 
+function displayQuestion(question){
+    questions.innerText = question.question  
 
+}
 
+function selectAnswer (){
 
-
-
-
-
-
-
-
-let questions = document.querySelector('#question');
-let answers = document.getElementById('answer-buttons');
-
-
-const startButton = document.querySelector(".next-btn btn");
-startButton.addEventListener("click", function() {
-    alert("you clicked a button!");
-});
-
-const questionContainerElement = document.querySelector('question-container');
+}
