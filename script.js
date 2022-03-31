@@ -96,8 +96,17 @@ displayQuestion(randomQuestions[currentQuestionIndex])
 
 function displayQuestion(question){
     questionElement.innerText = question.question 
-    };
-
+    question.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.answers 
+        button.classList.add('btn')
+        if(answer.correct){
+            button.correct = answer.correct 
+        }
+        button.addEventListener('click', selectAnswer)
+        answerButtons.appendChild(button)
+    })
+};
 
 
 function chooseAnswer (){
