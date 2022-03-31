@@ -79,25 +79,28 @@ const answerButtons = document.getElementById('answer-buttons')
 
 startButton.addEventListener('click', startGame);
 let currentQuestionIndex = 0; 
+let randomQuestions = 0;
 
 
 function startGame() {
 console.log('start')
-currentQuestionIndex = questions
+currentQuestionIndex = 0;
+randomQuestions = questions.sort(() => Math.random() - .5)
 selectNextQuestion()
 }
 
 function selectNextQuestion (){
-displayQuestion([currentQuestionIndex])
+displayQuestion(randomQuestions[currentQuestionIndex])
 
 }
 
 function displayQuestion(question){
     questionElement.innerText = question.question 
+    };
 
+
+
+function chooseAnswer (){
 }
 
-function selectAnswer (){
 
-
-}

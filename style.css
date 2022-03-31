@@ -67,11 +67,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin: 100px; */
-    color: pink;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(207, 42, 119);
+    font-weight: bolder;
+    text-shadow: -1px 1px 000 #000;
+    -webkit-text-stroke: 1px #000;
 }
-body {
-    background-image: url ('https://wallpapercave.com/wp/wp3192477.jpg');
+.body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -79,15 +82,23 @@ body {
    justify-content:center;
    align-items: center;
    width: 100vw;
-   height: 100vh ;
+   height: 100vh;
+}
+
+body{
+    background-image: url("https://preview.redd.it/wjyq8j7mu6u61.jpg?width=640&crop=smart&auto=webp&s=036e6d340a7c5200d98416fa865b2f4637b9ab1d");
+    background-attachment: fixed;
+    /* background-position: 1000px; */
 }
 
 .container{
-    width: 800px;
+    width: 500px;
     max-width: 70%;
-    background-color: pink;
+    background-color: rgb(224, 68, 141);
     border-radius: 5px;
-    padding: 25px;
+    padding: 50px;
+    margin-top: 150px;
+    margin-left: 400px;
 }
 
 .btn-grid{
@@ -95,4 +106,9 @@ body {
     grid-template-columns: repeat(2, auto);
     gap: 15px;
     margin: 20px;
+    padding: 20px;
+}
+
+#question{
+    font-size: 30px;
 }
