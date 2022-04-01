@@ -141,3 +141,7 @@ function checkEndGame() {
     }
 }
 
+const message = document.getElementById('message').innerHTML
+const pictures = document.getElementById('pictures').src = pictures
+
+let pictures = []
