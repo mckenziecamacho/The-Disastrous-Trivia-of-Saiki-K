@@ -9,66 +9,66 @@ let questions = [
     ],
     correctAnswer: 2
 },
-// {
-//     question: 'Who is Saiki\'s best friend?',
-//     answers: [
-//          'Terauhashi',
-//          'Nendo',
-//          'Kaido',
-//          'No one. All of Saiki\'s friends annoy him'
-//     ],
-//     correctAnswer: 3
-// },
-// {
-//     question: 'What is Saiki\'s first name?',
-//     answers: [
-//         'Kaoru',
-//         'Katsuo',
-//         'Kuriko',
-//         'Kusuo'
-//     ],
-//     correctAnswer: 3
-// },
-// {
-//     question: 'Who is in love with Saiki?',
-//     answers: [
-//         'Teruhashi',
-//         'Chiyo',
-//         'Mera',
-//         'Mikoto'
-//     ],
-//     correctAnswer: 0
-// },
-// {
-//     question: 'How does Teruhashi view herself?',
-//     answers: [
-//         'The cool girl',
-//         'Perfect pretty girl',
-//         'Normal girl',
-//         'Most beautiful girl'
-//     ],
-//     correctAnswer: 1
-// },
-// {
-//     question: 'What is Saiki afraid of?',
-//     answers: [
-//         'Being Alone',
-//         'Cats',
-//         'Heights',
-//         'Bugs'
-//     ],
-//     correctAnswer: 3
-// },
-// {
-//     question: 'What evil organization does Kaido fight against?',
-//     answers: [
-//         'The Twelve Demon Moons',
-//         'Dark Reunion',
-//         'Akatsuki',
-//         'The League of Villans'
-//     ],
-//     correctAnswer: 1
-// }
+{
+    question: 'Who is Saiki\'s best friend?',
+    answers: [
+         'Terauhashi',
+         'Nendo',
+         'Kaido',
+         'No one. All of Saiki\'s friends annoy him'
+    ],
+    correctAnswer: 3
+},
+{
+    question: 'What is Saiki\'s first name?',
+    answers: [
+        'Kaoru',
+        'Katsuo',
+        'Kuriko',
+        'Kusuo'
+    ],
+    correctAnswer: 3
+},
+{
+    question: 'Who is in love with Saiki?',
+    answers: [
+        'Teruhashi',
+        'Chiyo',
+        'Mera',
+        'Mikoto'
+    ],
+    correctAnswer: 0
+},
+{
+    question: 'How does Teruhashi view herself?',
+    answers: [
+        'The cool girl',
+        'Perfect pretty girl',
+        'Normal girl',
+        'Most beautiful girl'
+    ],
+    correctAnswer: 1
+},
+{
+    question: 'What is Saiki afraid of?',
+    answers: [
+        'Being Alone',
+        'Cats',
+        'Heights',
+        'Bugs'
+    ],
+    correctAnswer: 3
+},
+{
+    question: 'What evil organization does Kaido fight against?',
+    answers: [
+        'The Twelve Demon Moons',
+        'Dark Reunion',
+        'Akatsuki',
+        'The League of Villans'
+    ],
+    correctAnswer: 1
+}
 ];
 
 const startButton = document.getElementById('start-btn')
@@ -111,8 +111,6 @@ function displayQuestion(question){
         const button = document.createElement('button')
         const answerButtons = document.getElementById('answer-buttons')
         button.id = index
-        // loop over answers object to get each one
-        // string int to replace text 
         console.log(answer)
         button.innerText = answer
         answerButtons.appendChild(button)
@@ -122,16 +120,10 @@ function displayQuestion(question){
 
 
 function checkAnswer() {
-    // compare selected answer to correct answer from the questions array
-    // two parameter user selection and correct answer
-    // event listener for user selection
-    // target the correct answer (refer to how to display answers)
-    // compare the two
-    // if correct add a point if not dont
     if (parseInt(this.id) === randomQuestions[currentQuestionIndex].correctAnswer){
         console.log('correctAnswer')
         score++
-        scoreText.innerText = `Score: ${score}` 
+        scoreText.innerText = `Score: ${score}/7` 
         checkEndGame()
     } else {
         console.log('wrongAnswer')
@@ -141,9 +133,9 @@ function checkAnswer() {
 }
 
 function checkEndGame() {
-    if (currentQuestionIndex < questions.length){
+    if (currentQuestionIndex >= questions.length){
         console.log('game over')
-        gameContainer.innerHTML = '<h1>Game Over</h1>'
+        gameContainer.innerHTML = '<h1>Great job! Thanks for playing!!!</h1>'
     } else{
         selectNextQuestion()
     }
