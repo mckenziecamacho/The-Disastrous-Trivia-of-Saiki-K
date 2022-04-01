@@ -1,6 +1,6 @@
 # The-Disastrous-Trivia-of-Saiki-K
 ![Wireframe - In-Progress](img/Screen%20Shot%202022-03-27%20at%2011.47.32%20PM.png)
-
+![Wireframe - In-Progress](img/Screen%20Shot%202022-04-01%20at%2012.12.22%20PM.png)
 Technologies Used: Git, Github, Github Pages, HTML, CSS, JavaScript
 
 Project Description:
