@@ -111,4 +111,9 @@ body{
 
 #question{
     font-size: 30px;
+    text-align: center;
+}
+
+#score{
+    font-size: 30px;
 }
