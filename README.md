@@ -9,7 +9,7 @@ Technologies Used: Github, Github Pages, HTML, CSS, Javascript
 Technologies Used: Github, Github Pages, HTML, CSS, JavaScript
 >>>>>>> 56d5caaee5c49275e075efb63162106dbc5bad3b
 
-Project Description
+Project Description:
 This is project is called The Disastrous Trivia of Saiki K. It is a trivia game about the anime Saiki K. The questions in the trivia game are about the shows characters, plot lines and interesting facts.
 
 How to Play the Game:
