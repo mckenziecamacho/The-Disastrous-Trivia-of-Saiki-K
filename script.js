@@ -1,73 +1,73 @@
 let questions = [
 {
     question: 'What is Saiki\'s favorite food?',
-    answers: {
-        a: 'Ramen',
-        b: 'Miso Soup',
-        c: 'Coffee Jelly',
-        d: 'Tonkatsu'
-    },
-    correctAnswer: 'c'
+    answers: [
+         'Ramen',
+         'Miso Soup',
+         'Coffee Jelly',
+         'Tonkatsu'
+    ],
+    correctAnswer: 2
 },
 {
     question: 'Who is Saiki\'s best friend?',
-    answers: {
-        a: 'Terauhashi',
-        b: 'Nendo',
-        c: 'Kaido',
-        d: 'No one. All of Saiki\'s friends annoy him'
-    },
-    correctAnswer: 'd'
+    answers: [
+         'Terauhashi',
+         'Nendo',
+         'Kaido',
+         'No one. All of Saiki\'s friends annoy him'
+    ],
+    correctAnswer: 3
 },
 {
     question: 'What is Saiki\'s first name?',
-    answers: {
-        a: 'Kaoru',
-        b: 'Katsuo',
-        c: 'Kuriko',
-        d: 'Kusuo'
-    },
-    correctAnswer: 'd'
+    answers: [
+        'Kaoru',
+        'Katsuo',
+        'Kuriko',
+        'Kusuo'
+    ],
+    correctAnswer: 3
 },
 {
     question: 'Who is in love with Saiki?',
-    answers: {
-        a: 'Teruhashi',
-        b: 'Chiyo',
-        c: 'Mera',
-        d: 'Mikoto'
-    },
-    correctAnswer: 'a'
+    answers: [
+        'Teruhashi',
+        'Chiyo',
+        'Mera',
+        'Mikoto'
+    ],
+    correctAnswer: 0
 },
 {
     question: 'How does Teruhashi view herself?',
-    answers: {
-        a: 'The cool girl',
-        b: 'Perfect pretty girl',
-        c: 'Normal girl',
-        d: 'Most beautiful girl'
-    },
-    correctAnswer: 'b'
+    answers: [
+        'The cool girl',
+        'Perfect pretty girl',
+        'Normal girl',
+        'Most beautiful girl'
+    ],
+    correctAnswer: 1
 },
 {
     question: 'What is Saiki afraid of?',
-    answers: {
-        a: 'Being Alone',
-        b: 'Cats',
-        c: 'Heights',
-        d: 'Bugs'
-    },
-    correctAnswer: 'd'
+    answers: [
+        'Being Alone',
+        'Cats',
+        'Heights',
+        'Bugs'
+    ],
+    correctAnswer: 3
 },
 {
     question: 'What evil organization does Kaido fight against?',
-    answers: {
-        a: 'The Twelve Demon Moons',
-        b: 'Dark Reunion',
-        c: 'Akatsuki',
-        d: 'The League of Villans'
-    },
-    correctAnswer: 'b'
+    answers: [
+        'The Twelve Demon Moons',
+        'Dark Reunion',
+        'Akatsuki',
+        'The League of Villans'
+    ],
+    correctAnswer: 1
 }
 ];
 
@@ -75,41 +75,50 @@ const startButton = document.getElementById('start-btn')
 const questionContainer = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtons = document.getElementById('answer-buttons')
-
+const nextButton = document.getElementById('next-btn')
 
 startButton.addEventListener('click', startGame);
 let currentQuestionIndex = 0; 
-let randomQuestions = 0;
+let randomQuestions = [];
 
 
 function startGame() {
 console.log('start')
 currentQuestionIndex = 0;
 randomQuestions = questions.sort(() => Math.random() - .5)
-selectNextQuestion()
+displayQuestion(randomQuestions[currentQuestionIndex])
+startButton.disabled = true;
 }
 
 function selectNextQuestion (){
+ while(answerButtons.firstChild){
+     answerButtons.removeChild(answerButtons.firstChild)
+ }
+currentQuestionIndex++
 displayQuestion(randomQuestions[currentQuestionIndex])
-
 }
+nextButton.addEventListener('click', selectNextQuestion)
+
 
 function displayQuestion(question){
+    console.log(question)
     questionElement.innerText = question.question 
+    console.log(question.answers)
     question.answers.forEach(answer => {
         const button = document.createElement('button')
-        button.innerText = answer.answers 
-        button.classList.add('btn')
-        if(answer.correct){
-            button.correct = answer.correct 
-        }
-        button.addEventListener('click', selectAnswer)
+        const answerButtons = document.getElementById('answer-buttons')
+        
+        // loop over answers object to get each one
+        // string int to replace text 
+        console.log(answer)
+        button.innerText = answer
         answerButtons.appendChild(button)
     })
 };
 
 
-function chooseAnswer (){
+function checkAnswer (){
+    // compare selected answer to correct answer from the questions array
 }
 
 
