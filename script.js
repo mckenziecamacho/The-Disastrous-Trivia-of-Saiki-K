@@ -133,7 +133,7 @@ function checkAnswer() {
 }
 
 function checkEndGame() {
-    if (currentQuestionIndex >= questions.length){
+    if (currentQuestionIndex >= questions.length -1){
         console.log('game over')
         gameContainer.innerHTML = '<h1>Great job! Thanks for playing!!!</h1>'
     } else{
